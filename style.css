@@ -1,140 +1,80 @@
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(to bottom right, #f8f9fa, #e3f2fd);
-}
-
-.navbar {
-  background-color: #4a5568;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.logo {
-  color: white;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.section {
-  display: none;
-  padding: 60px 20px;
-  animation: fadeIn 0.7s ease;
-}
-
-.section.active {
-  display: block;
-}
-
-.content-box {
-  max-width: 800px;
-  margin: auto;
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.jumbotron {
-  text-align: center;
-  padding: 4rem 1rem;
-}
-
-.profile-img {
-  width: 180px;
-  border-radius: 50%;
-  border: 5px solid white;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  animation: zoomIn 1s ease;
-}
-
-.project-grid {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.project-card {
-  width: 250px;
-  background: #fff;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.project-card img {
+/* === Perbaikan Gambar Project === */
+.project-img {
+  height: 220px;
+  object-fit: cover;
   width: 100%;
-  border-radius: 10px;
-  margin-bottom: 0.5rem;
+  border-radius: 10px 10px 0 0;
+  transition: 0.3s ease;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.project-img:hover {
+  transform: scale(1.03);
 }
 
-input,
-textarea {
-  padding: 0.75rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+/* === Latar Section About & Projects === */
+#about {
+  background-color: #f2f2f2;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
-button {
-  padding: 0.7rem;
-  border: none;
-  border-radius: 8px;
-  background-color: #4a5568;
-  color: white;
-  font-weight: bold;
+#pendidikan {
+  background-color: #ffffff;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
+#projects {
+  background-color: #f8f9fa;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+#contact {
+  background-color: #eaeaea;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* === Jumbotron (welcome-section) === */
+#welcome-section {
+  background: linear-gradient(to right, #d9e4f5, #fefefe);
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+}
+
+/* Footer */
 footer {
-  text-align: center;
-  padding: 1rem;
-  background: #2c2c2c;
-  color: white;
-  margin-top: 3rem;
+  background-color: #6c757d !important;
+}
+.project-img {
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: 0.3s ease;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.project-img:hover {
+  transform: scale(1.03);
+}
+/* --- Pendidikan Section Style --- */
+.education-section .card {
+  transition: transform 0.3s ease;
 }
 
-@keyframes zoomIn {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+.education-section .card:hover {
+  transform: translateY(-5px);
+}
+.section-rounded {
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  padding-bottom: 60px;
+  margin-bottom: 0;
+}
+
+.section-top-rounded {
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  padding-top: 60px;
+  margin-top: -30px;
 }
